@@ -2,8 +2,49 @@
  * bootScore custom styles
  */
 
+ /* lexend-deca-200 - latin */
+@font-face {
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../fonts/lexend-deca-v17-latin-200.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/lexend-deca-v17-latin-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/lexend-deca-v17-latin-200.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/lexend-deca-v17-latin-200.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/lexend-deca-v17-latin-200.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/lexend-deca-v17-latin-200.svg#LexendDeca') format('svg'); /* Legacy iOS */
+}
+/* lexend-deca-regular - latin */
+@font-face {
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/lexend-deca-v17-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/lexend-deca-v17-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/lexend-deca-v17-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/lexend-deca-v17-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/lexend-deca-v17-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/lexend-deca-v17-latin-regular.svg#LexendDeca') format('svg'); /* Legacy iOS */
+}
+/* lexend-deca-600 - latin */
+@font-face {
+  font-family: 'Lexend Deca';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/lexend-deca-v17-latin-600.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/lexend-deca-v17-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/lexend-deca-v17-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/lexend-deca-v17-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/lexend-deca-v17-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/lexend-deca-v17-latin-600.svg#LexendDeca') format('svg'); /* Legacy iOS */
+}
+
  body{
     font-family: 'Lexend Deca', sans-serif;
+    font-weight: 200;
  }
 
 // Navigation
@@ -11,16 +52,30 @@
     background-color: rgba(0,0,0,0.85) !important;
 }
 
+.nav-link {
+  color: #fff;
+  text-transform: uppercase;
+}
+
 // Text
 h1, h2, h3, h4, h5, h6 {
     font-family: bebas-neue-pro, sans-serif;
     font-weight: 600;
+    text-transform: uppercase;
 }
 .display-1, .display-1 a {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 600;
 }
+
+.light {
+  color: black;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.lead { font-weight: 600; }
 
 
 * { text-decoration: none;}
@@ -38,127 +93,69 @@ h1, h2, h3, h4, h5, h6 {
     background-size: cover !important;
 }
 
-.lead { font-weight: 600; }
-
-.gtco-testimonials {
-  position: relative;
-  margin-top: 30px;
-
-  h2 {
-    font-size: 30px;
-    text-align: center;
-    color: #333333;
-    margin-bottom: 50px;
-  }
-
-  .owl-stage-outer {
-    padding: 30px 0;
-  }
-
-  .owl-nav {
-    display: none;
-  }
-
-  .owl-dots {
-    text-align: center;
-
-    span {
-      position: relative;
-      height: 10px;
-      width: 10px;
-      border-radius: 50%;
-      display: block;
-      background: #fff;
-      border: 2px solid #01b0f8;
-      margin: 0 5px;
-    }
-
-    .active {
-      box-shadow: none;
-
-      span {
-        background: #01b0f8;
-        box-shadow: none;
-        height: 12px;
-        width: 12px;
-        margin-bottom: -1px;
-      }
-    }
-  }
-
-  .card {
-    background: #fff;
-    box-shadow: 0 8px 30px -7px #c9dff0;
-    margin: 0 20px;
-    padding: 0 10px;
-    border-radius: 20px;
-    border: 0;
-
-    .card-img-top {
-      max-width: 100px;
-      border-radius: 50%;
-      margin: 15px auto 0;
-      box-shadow: 0 8px 20px -4px #95abbb;
-      width: 100px;
-      height: 100px;
-    }
-
-    h5 {
-      color: #01b0f8;
-      font-size: 21px;
-      line-height: 1.3;
-
-      span {
-        font-size: 18px;
-        color: #666666;
-      }
-    }
-
-    p {
-      font-size: 18px;
-      color: #555;
-      padding-bottom: 15px;
-    }
-  }
-
-  .active {
-    opacity: 0.5;
-    transition: all 0.3s;
-  }
-
-  .center {
-    opacity: 1;
-
-    h5 {
-      font-size: 24px;
-
-      span {
-        font-size: 20px;
-      }
-    }
-
-    .card-img-top {
-      max-width: 100%;
-      height: 120px;
-      width: 120px;
-    }
-  }
+// Featured Artists Carousel
+.owl-carousel button.owl-dot {
+  border-radius: 0px !important;
 }
 
-@media (max-width: 767px) {
-  .gtco-testimonials {
-    margin-top: 20px;
-  }
+.owl-carousel button.owl-dot.active span {
+  background: #02498E !important;
 }
 
-.owl-carousel {
-  .owl-nav button {
-    &.owl-next, &.owl-prev {
-      outline: 0;
-    }
-  }
+.owl-theme .owl-dots .owl-dot span {
+  width: 60px !important;
+  height: 5px !important;
+  background: #E6E6E6 !important;
+}
 
-  button.owl-dot {
-    outline: 0;
-  }
+.owl-nav { display: none; }
+
+// What We Do
+.section-2{
+  background: linear-gradient(180deg, rgba(21, 21, 21, 0.8) 0%, #151515 100%);
+  padding: 2rem 0;
+}
+
+.card.service {;
+  transition: 0.2s ease-in;
+  min-height: 250px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-width: 0;
+  border-radius: 0;
+}
+
+.card.service:hover {
+  padding-top: 0;
+  transition: 0.2s ease-in;
+}
+
+.card-body.service {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 10%, #000000 100%);
+  transition: background-image .25s .25s;
+}
+
+.card-body.service:hover {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, #000000 100%);
+  transition: background-image .25s .25s;
+}
+
+.card.service .list {
+  font-size: 0;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  transition: opacity .25s,
+            font-size .5s .25s,
+            margin .5s .25s,
+            padding .5s .25s;
+}
+.card.service:hover .list{
+  font-size: 0.9rem;
+  opacity: 1;
+  transition: font-size .25s,
+              margin .25s,
+              padding .25s,
+              opacity .5s .25s;
 }

@@ -27,7 +27,6 @@
   <link rel="manifest" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/site.webmanifest">
   <link rel="mask-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/favicon/safari-pinned-tab.svg" color="#0d6efd">
   <link rel="stylesheet" href="https://use.typekit.net/nov7qii.css">
-  <link href="http://fonts.cdnfonts.com/css/lexend-deca" rel="stylesheet">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
   <?php wp_head(); ?>
