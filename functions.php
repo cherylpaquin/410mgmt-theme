@@ -55,4 +55,12 @@ if( function_exists('acf_add_options_page') ) {
     'icon_url'    => 'dashicons-admin-users',
     'redirect'    => false
   ));
+
+  acf_add_options_page(array(
+    'page_title'  => 'Call to Action',
+    'menu_title'  => 'Call to Action',
+    'menu_slug'   => 'call-action',
+    'capability'  => 'edit_posts',
+    'redirect'    => false
+  ));
 }

@@ -40,18 +40,17 @@
 
     <header id="masthead" class="site-header">
 
-      <div class="fixed-top bg-dark">
+      <div class="fixed-top">
 
-        <nav id="nav-main" class="navbar navbar-expand-lg">
+        <nav id="nav-main" class="navbar navbar-expand-lg navbar-dark bg-dark">
 
           <div class="container">
 
             <!-- Navbar Brand -->
-            <a class="navbar-brand xs d-md-none" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo-sm.svg" alt="logo" class="logo xs"></a>
-            <a class="navbar-brand col-sm-1" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo.png" alt="logo" class="logo md"></a>
+            <a class="navbar-brand col-sm-1" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo.png" alt="logo" class="logo brand-name"></a>
 
             <!-- Offcanvas Navbar -->
-            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-navbar">
+            <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvas-navbar">
               <div class="offcanvas-header bg-dark">
                 <span class="h5 mb-0"><?php esc_html_e('Menu', 'bootscore'); ?></span>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>

@@ -47,14 +47,33 @@
     font-weight: 200;
  }
 
+ .container-fluid {
+ padding: 0 !important;
+ }
+
 // Navigation
 .bg-dark {
-    background-color: rgba(0,0,0,0.85) !important;
+    background-color: rgba(0, 0, 0 ,0.85) !important;
 }
 
 .nav-link {
-  color: #fff;
   text-transform: uppercase;
+}
+
+.btn-close {
+  color: #fff !important;
+  width: auto !important;
+}
+
+.btn-outline-secondary {
+  --bs-btn-color: #fff;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-color: #02498E;
+  --bs-btn-hover-bg: transparent;
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-focus-shadow-rgb: 108, 117, 125;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #02498E;
 }
 
 // Text
@@ -112,13 +131,15 @@ h1, h2, h3, h4, h5, h6 {
 
 // What We Do
 .section-2{
-  background: linear-gradient(180deg, rgba(21, 21, 21, 0.8) 0%, #151515 100%);
-  padding: 2rem 0;
+  background: linear-gradient(180deg, rgba(21, 21, 21, 0.8) 0%, #151515 100%), url("../img/background-light.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 7rem 1rem 3rem !important;
 }
 
 .card.service {;
   transition: 0.2s ease-in;
-  min-height: 250px;
+  min-height: 300px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -142,20 +163,172 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card.service .list {
+  max-height: 0px;
+  overflow: hidden;
   font-size: 0;
   margin: 0;
   opacity: 0;
   padding: 0;
   transition: opacity .25s,
-            font-size .5s .25s,
-            margin .5s .25s,
-            padding .5s .25s;
+              font-size .5s .25s,
+              margin .5s .25s,
+              padding .5s .25s;
 }
 .card.service:hover .list{
+  max-height: 100%;
   font-size: 0.9rem;
   opacity: 1;
   transition: font-size .25s,
               margin .25s,
               padding .25s,
               opacity .5s .25s;
+}
+
+// Our Work
+
+.section-3{
+  background: #151515;
+  padding: 7rem 1rem 3rem !important;
+}
+
+.artist-group {
+    max-height: 456px;
+    overflow-y: scroll;
+}
+
+.artist-item {
+  background: #151515;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  transition: background 0.25s ease-out;
+}
+
+.artist-item:hover,
+.artist-item:active {
+  background: #023a72;
+  border: 0;
+  border-radius: 0;
+  transition: background 0.25s ease-out;
+}
+
+.artist-name {
+  border-bottom: 1px #4B4B4B solid;
+  color: #fff;
+  margin: 0;
+  padding: 1rem 2rem;
+}
+
+// Our Team
+
+.section-4{
+  padding: 7rem 1rem 3rem !important;
+  background: url("../img/background.jpg"), rgba(21, 21, 21, 0.75);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: color-burn, normal;
+}
+
+.lead.upper {
+  text-transform: uppercase;
+}
+
+.team-photo {
+  border-radius: 100px;
+  height: 170px;
+  width: 170px;
+  overflow: hidden;
+  padding: 0;
+}
+.profile-pic {
+  background-size: cover;
+  background-position: center;
+  width: 170px;
+  height: 170px;
+  transition: all .25s ease-in-out;
+}
+
+.team-photo .profile-pic:hover {
+  transform: scale(1.1); 
+  transition: all .25s ease-in-out;
+}
+
+.team-member {
+  border: 0;
+  border-radius: 0px;
+  background: transparent;
+}
+
+.team-info {
+  background: transparent;
+}
+
+// Contact Us
+
+.section-5 {
+  background: #151515;
+  padding: 7rem 1rem 3rem !important;
+}
+
+.contact-primary {
+    background: white !important;
+    border: 4px solid #02498E !important;
+    border-radius: 50px !important;
+    color: #02498E !important;
+    font-size: 1.2em !important;
+    padding: 16px 50px !important;
+    transition: all .25s ease-in;
+}
+
+div.wpforms-container-full {
+  margin: 0 auto !important;
+}
+
+.contact-primary:hover {
+  background: #02498e !important;
+  color: #fff !important;
+  transition: all .25s ease-in;
+}
+
+// FOOTER
+
+.logo-footer {
+  width: 170px;
+}
+
+// MEDIA QUERIES
+
+@include media-breakpoint-down(lg) {
+  .navbar-brand {
+    width: 125px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .navbar-brand {
+    width: 100px !important;
+  }
+
+  .section-2, .section-3, .section-4, .section-5 {
+    padding: 7rem 2rem 3rem !important;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .main-header {
+    padding: 1.25rem;
+  }
+  .work-description {
+    padding-bottom: 2rem;
+  }
+
+  .owl-theme .owl-dots .owl-dot span {
+    width: 15px !important;
+    height: 15px !important;
+  }
+
+  .logo-footer {
+    margin-bottom: 2rem;
+  }
+
 }

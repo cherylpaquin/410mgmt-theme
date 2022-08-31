@@ -21,7 +21,7 @@ $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 
   <div id="hero" class="hero-banner row align-items-center justify-content-center" style="background: url('<?php echo $backgroundImg[0]
 ; ?>') no-repeat;">
     <div class="col-sm-8">
-      <header class="main-header">
+      <header class="main-header d-flex flex-column align-items-center">
           <?php the_post(); ?>
           <!-- Title -->
             <h1 class="display-1">
@@ -29,6 +29,7 @@ $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 
                 <span class="wrap"></span>
               </a>MGMT
             </h1>
+            <div style="width: 30rem; height: 1px; background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);" class="my-2" ></div>
           <!-- Subtitle -->
           <p class="lead"><?php bloginfo('description'); ?></p>
       </header><!-- .main-header -->
@@ -80,18 +81,20 @@ $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 
     <!-- What We Do -->
     <?php get_template_part('template-parts/whatwedo') ?>
   </div>
-
   <!-- Ready to Work CTA -->
   <?php get_template_part('template-parts/featuredartists') ?>
-
-  <!-- Our Work -->
-  <?php get_template_part('template-parts/featuredartists') ?>
-
+  <div id="our-work">
+    <!-- Our Work -->
+    <?php get_template_part('template-parts/ourwork') ?>
+  </div>
+  <div id="our-team">
   <!-- Our Team -->
-  <?php get_template_part('template-parts/featuredartists') ?>
-
-  <!-- Contact -->
-  <?php get_template_part('template-parts/featuredartists') ?>
+    <?php get_template_part('template-parts/ourteam') ?>
+  </div>
+  <div id="contact">
+    <!-- Contact -->
+    <?php get_template_part('template-parts/contact') ?>
+  </div>
 
 </div><!-- #content -->
 
