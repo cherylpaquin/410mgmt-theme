@@ -43,6 +43,10 @@
       format('svg'); /* Legacy iOS */
 }
 
+:root {
+  scroll-behavior: auto;
+}
+
 body {
   font-family: 'Lexend Deca', sans-serif;
   font-weight: 200;
