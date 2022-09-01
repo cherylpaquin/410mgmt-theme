@@ -17,7 +17,7 @@ get_header();
 $backgroundImg = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
 ?>
 
-<div id="content" class="container-fluid">
+<div id="content">
   <div id="hero" class="hero-banner d-flex flex-column justify-content-center" style="background: url('<?php echo $backgroundImg[0]; ?>') no-repeat;">
     <div class="container-xxl">
       <div class="row justify-content-center">
