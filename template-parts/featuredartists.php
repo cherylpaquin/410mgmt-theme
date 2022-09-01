@@ -1,21 +1,18 @@
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/owl.carousel.min.css">
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/owl.theme.default.min.css">
-
 <div style="background: #fff;">
   <div class="container-xxl">
     <div class="row">
       <div class="col-12 py-5">
         <h1 class="light">Featured Artists</h1>
         <div class="owl-carousel owl-theme">
-          <?php 
-          $images = get_field('logos', 'option');
-          if( $images ): ?>
-            <?php foreach( $images as $image ): ?>
+          <?php
+$images = get_field('logos', 'option');
+if ($images): ?>
+            <?php foreach ($images as $image): ?>
                 <div class="artist">
                   <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                 </div>
-            <?php endforeach; ?>
-          <?php endif; ?>
+            <?php endforeach;?>
+          <?php endif;?>
         </div>
       </div>
       <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.mousewheel.min.js"></script>
