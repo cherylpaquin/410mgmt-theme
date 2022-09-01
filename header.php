@@ -32,7 +32,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> data-bs-spy="scroll" data-bs-target="#nav-main" data-bs-offset="0" tabindex="0" style="overflow-y: scroll;">
 
   <?php wp_body_open(); ?>
 

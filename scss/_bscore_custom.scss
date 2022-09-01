@@ -292,6 +292,17 @@ div.wpforms-container-full {
   transition: all .25s ease-in;
 }
 
+// CTA BANNER
+
+.call-to-action {
+  background: linear-gradient(0deg, #02498E, #02498E), linear-gradient(0deg, #000000, #000000), url(../img/cta-bg.jpg), #000000;
+  background-blend-mode: hard-light, color, normal, normal;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
 // FOOTER
 
 .logo-footer {

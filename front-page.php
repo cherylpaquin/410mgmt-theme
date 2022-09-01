@@ -86,7 +86,7 @@ $backgroundImg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 
     <?php get_template_part('template-parts/whatwedo') ?>
   </div>
   <!-- Ready to Work CTA -->
-  <?php get_template_part('template-parts/featuredartists') ?>
+  <?php get_template_part('template-parts/calltoaction') ?>
   <div id="our-work">
     <!-- Our Work -->
     <?php get_template_part('template-parts/ourwork') ?>
