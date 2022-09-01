@@ -23,6 +23,57 @@ jQuery(function ($) {
     }
   });
 
+  $('.owl-carousel1').owlCarousel({
+    loop: true,
+    center: true,
+    margin: 0,
+    responsiveClass: true,
+    nav: false,
+    responsive: {
+      0: {
+        items: 1,
+        nav: false,
+      },
+
+      680: {
+        items: 2,
+        nav: false,
+        loop: false,
+      },
+
+      1000: {
+        items: 3,
+        nav: true,
+      },
+    },
+  });
+
+  var owl = $('.owl-carousel');
+  owl.owlCarousel({
+    loop: true,
+    nav: true,
+    margin: 10,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      960: {
+        items: 3,
+      },
+    },
+  });
+  owl.on('mousewheel', '.owl-stage', function (e) {
+    e.preventDefault();
+    if (e.deltaY < 0) {
+      owl.trigger('next.owl');
+    } else {
+      owl.trigger('prev.owl');
+    }
+  });
+
   var TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
