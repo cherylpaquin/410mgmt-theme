@@ -1,4 +1,4 @@
-<div style="background: #fff;">
+<div class="featured">
   <div class="container-xxl">
     <div class="row">
       <div class="col-12 py-5">
