@@ -74,6 +74,10 @@ jQuery(function ($) {
     }
   });
 
+  $('#content').scrollspy({
+    target: '#bootscore-navbar',
+  });
+
   var TxtType = function (el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;

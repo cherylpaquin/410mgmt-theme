@@ -59,8 +59,14 @@ body {
   background-color: rgba(0, 0, 0, 0.85) !important;
 }
 
-.nav-link {
-  text-transform: uppercase;
+.navbar-nav {
+  .nav-link {
+    text-transform: uppercase;
+
+    &.active {
+      color: #02498e;
+    }
+  }
 }
 
 .btn-close {
