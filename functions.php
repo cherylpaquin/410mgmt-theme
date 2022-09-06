@@ -24,11 +24,20 @@ function bootscore_child_enqueue_styles()
 if (function_exists('acf_add_options_page')) {
 
     acf_add_options_page(array(
+        'page_title' => 'Intro Text',
+        'menu_title' => 'Intro Text',
+        'menu_slug' => 'intro-text',
+        'capability' => 'edit_posts',
+        'position' => '6',
+        'redirect' => false,
+    ));
+
+    acf_add_options_page(array(
         'page_title' => 'Featured Artists',
         'menu_title' => 'Featured Artists',
         'menu_slug' => 'featured-artists',
         'capability' => 'edit_posts',
-        'position' => '6',
+        'position' => '7',
         'icon_url' => 'dashicons-format-audio',
         'redirect' => false,
     ));
@@ -38,7 +47,7 @@ if (function_exists('acf_add_options_page')) {
         'menu_title' => 'What We Do',
         'menu_slug' => 'what-we-do',
         'capability' => 'edit_posts',
-        'position' => '7',
+        'position' => '8',
         'icon_url' => 'dashicons-star-filled',
         'redirect' => false,
     ));
@@ -47,7 +56,7 @@ if (function_exists('acf_add_options_page')) {
         'menu_title' => 'Our Work',
         'menu_slug' => 'our-work',
         'capability' => 'edit_posts',
-        'position' => '8',
+        'position' => '9',
         'icon_url' => 'dashicons-admin-site',
         'redirect' => false,
     ));
@@ -57,7 +66,7 @@ if (function_exists('acf_add_options_page')) {
         'menu_title' => 'Our Team',
         'menu_slug' => 'our-team',
         'capability' => 'edit_posts',
-        'position' => '9',
+        'position' => '10',
         'icon_url' => 'dashicons-admin-users',
         'redirect' => false,
     ));

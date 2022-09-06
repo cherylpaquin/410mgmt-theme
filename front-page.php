@@ -24,12 +24,7 @@ $backgroundImg = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), '
         <div class="col-sm-8">
           <header class="main-header d-flex flex-column align-items-center">
               <?php the_post();?>
-              <!-- Title -->
-                <h1 class="display-1">
-                  <a href="" class="typewrite" data-period="2000" data-type='[ "410", "Tour", "Production", "Travel", "Project" ]'>
-                    <span class="wrap"></span>
-                  </a>MGMT
-                </h1>
+              <?php get_template_part('template-parts/introtext') ?>
                 <div style="width: 80%; height: 1px; background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);" class="my-2" ></div>
               <!-- Subtitle -->
               <p class="lead"><?php bloginfo('description');?></p>

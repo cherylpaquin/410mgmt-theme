@@ -1,18 +1,9 @@
 <div class="featured">
-  <div class="container-xxl">
+  <div class="container-lg">
     <div class="row">
       <div class="col-12 py-5">
         <h1 class="light">Featured Artists</h1>
-        <div class="owl-carousel owl-theme">
-          <?php $images = get_field('logos', 'option');?>
-            <?php if ($images): ?>
-              <?php foreach ($images as $image): ?>
-                  <div class="artist">
-                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
-                  </div>
-              <?php endforeach;?>
-          <?php endif;?>
-        </div>
+        <?php echo do_shortcode('[bs-swiper-card type="featured-artists" tax="featured" order="ASC" posts="9"]'); ?>
       </div>
     </div>
   </div>

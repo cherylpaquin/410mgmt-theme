@@ -121,6 +121,10 @@ h6 {
   color: #02498e;
 }
 
+.carousel-item {
+  transition: transform 2s ease, opacity 1s ease-in;
+}
+
 // Hero Banner
 .main-header {
   background: linear-gradient(
@@ -139,31 +143,22 @@ h6 {
 }
 
 // Featured Artists Carousel
-.owl-stage-outer {
-    height: 150px;
+.artist {
+  border: 0 !important;
 }
 
-.owl-carousel button.owl-dot {
-  border-radius: 0px !important;
-}
-
-.owl-carousel button.owl-dot.active span {
-  background: #02498e !important;
-}
-
-.owl-theme .owl-dots .owl-dot span {
-  width: 60px !important;
-  height: 5px !important;
-  background: #e6e6e6 !important;
-}
-
-.owl-nav {
-  display: none;
-}
-
-// Featured Artists
 .featured {
   background: #fff;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+}
+
+.cards .swiper-pagination-bullet {
+  width: 2rem;
+  height: 0.25rem;
+  border-radius: 0;
 }
 
 // What We Do
