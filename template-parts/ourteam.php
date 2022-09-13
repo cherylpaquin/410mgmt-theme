@@ -17,7 +17,7 @@
 									</div>
 									<div class="team-bio col-sm-auto">
 										<div class="card-body team-info">
-											<p class="text-center"> <span class="lead upper"><?php the_sub_field('name');?></span><br>
+											<p class="bio-copy"> <span class="lead upper"><?php the_sub_field('name');?></span><br>
 											<?php the_sub_field('job_title');?></p>
 										</div>
 									</div>

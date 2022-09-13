@@ -6,7 +6,7 @@
 				Send us an Email</h1>
 			</div>
 			<div class="col-md-7">
-				<?php echo do_shortcode('[wpforms id="33" title="false"]'); ?>
+				<?php echo do_shortcode('[wpforms id="53" title="false"]'); ?>
 			</div>
 		</div>
 	</div>

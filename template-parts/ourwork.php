@@ -10,6 +10,7 @@
 			</div><!-- #title -->
 			<div id="artist-list" class="row col-md-7">
 				<div class="list-group artist-group">
+					<div>
 					<?php if( have_rows('list_of_artists', 'option')):
 						while( have_rows('list_of_artists', 'option')) : the_row(); ?>
 							<a href="<?php the_sub_field('artist_link'); ?>" target="_blank" class="artist-item list-group-item list-group-item-action">
@@ -17,6 +18,7 @@
 							</a>
 					<?php endwhile;
 					endif; ?>
+					</div>
 				</div>
 			</div><!-- #artist-list -->
 		</div><!-- .row -->
