@@ -35,3 +35,7 @@ $offcanvas-border-color:            none;
 $offcanvas-border-width:           	0;
 $offcanvas-bg-color:                $black;
 $offcanvas-color:                   $white;
+
+// CAROUSEL
+$carousel-transition-duration:       .1s;
+$carousel-transition:                transform $carousel-transition-duration ease-in-out; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
