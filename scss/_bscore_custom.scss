@@ -225,10 +225,7 @@ h6 {
 
 .artist-group {
   max-height: 456px;
-}
-
-.artist-group > .swiper-wrapper {
-  transition-timing-function: linear;
+  overflow-y: scroll;
 }
 
 .artist-item {
@@ -237,7 +234,6 @@ h6 {
   border-bottom: 1px #4b4b4b solid;
   border-radius: 0;
   transition: background 0.25s ease-out;
-  height: auto !important;
 }
 
 .artist-item:hover,

@@ -137,27 +137,3 @@ jQuery(function ($) {
     document.body.appendChild(css);
   };
 }); // jQuery End
-
-new Swiper('.artist-group', {
-  slidesPerView: 7,
-  breakpoints: {
-    768: {
-      slidesPerView: 8,
-    },
-  },
-  height: 456,
-  direction: 'vertical',
-  freeMode: true,
-  vertical: true,
-  speed: 1000,
-  loop: true,
-  autoplay: {
-    delay: 0,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: true,
-  },
-  mousewheel: true,
-  keyboard: {
-    enabled: true,
-  },
-});

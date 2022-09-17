@@ -8,17 +8,15 @@
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/Globe.png" class="mt-auto mx-auto" style="height: 200px; width: 200px;">
 				</div>
 			</div><!-- #title -->
-			<div id="artist-list" class="row col-md-7 mx-auto">
-				<div class="artist-group swiper p-0 p-md-2">
-					<div class="swiper-wrapper">
-						<?php if( have_rows('list_of_artists', 'option')): ?>
-							<?php while( have_rows('list_of_artists', 'option')) : the_row(); ?>
-								<a href="<?php the_sub_field('artist_link'); ?>" target="_blank" class="artist-item swiper-slide">
-									<p class="artist-name"><?php the_sub_field('artist_name'); ?></p>
-								</a>
-							<?php endwhile;?>
-						<?php endif; ?>
-					</div>
+			<div id="artist-list" class="row col-md-7">
+				<div class="list-group artist-group">
+					<?php if( have_rows('list_of_artists', 'option')):
+						while( have_rows('list_of_artists', 'option')) : the_row(); ?>
+							<a href="<?php the_sub_field('artist_link'); ?>" target="_blank" class="artist-item list-group-item list-group-item-action">
+								<p class="artist-name"><?php the_sub_field('artist_name'); ?></p>
+							</a>
+					<?php endwhile;
+					endif; ?>
 				</div>
 			</div><!-- #artist-list -->
 		</div><!-- .row -->
