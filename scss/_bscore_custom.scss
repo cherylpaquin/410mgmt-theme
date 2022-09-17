@@ -234,7 +234,7 @@ h6 {
 .artist-item {
   background: #151515;
   padding: 0;
-  border: 0;
+  border-bottom: 1px #4b4b4b solid;
   border-radius: 0;
   transition: background 0.25s ease-out;
   height: auto !important;
@@ -243,16 +243,17 @@ h6 {
 .artist-item:hover,
 .artist-item:active {
   background: #023a72;
-  border: 0;
+  border-bottom: 1px #4b4b4b solid;
   border-radius: 0;
   transition: background 0.25s ease-out;
 }
 
-.artist-name {
-  border-bottom: 1px #4b4b4b solid;
+.artist-name,
+a .artist-name {
   color: #fff;
   margin: 0;
   padding: 1rem 2rem;
+  text-decoration: none;
 }
 
 // Our Team
