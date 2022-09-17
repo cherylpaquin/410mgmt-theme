@@ -54,6 +54,10 @@ body {
   overflow-x: hidden;
 }
 
+#page {
+  height: auto !important;
+}
+
 // Navigation
 .bg-dark {
   background-color: rgba(0, 0, 0, 0.85) !important;
@@ -139,26 +143,8 @@ h6 {
 }
 
 // Featured Artists Carousel
-.owl-stage-outer {
-    height: 150px;
-}
-
-.owl-carousel button.owl-dot {
-  border-radius: 0px !important;
-}
-
-.owl-carousel button.owl-dot.active span {
-  background: #02498e !important;
-}
-
-.owl-theme .owl-dots .owl-dot span {
-  width: 60px !important;
-  height: 5px !important;
-  background: #e6e6e6 !important;
-}
-
-.owl-nav {
-  display: none;
+.card {
+  border: 0;
 }
 
 // Featured Artists
@@ -330,7 +316,7 @@ div.wpforms-container-full {
 // CTA BANNER
 
 .call-to-action {
-  background: linear-gradient(0deg, #02498e, #02498e), linear-gradient(0deg, #000000, #000000),
+  background: linear-gradient(90deg, #ffffff, #02498e), linear-gradient(90deg, #ffffff, #000000),
     url(../img/cta-bg.jpg), #000000;
   background-blend-mode: hard-light, color, normal, normal;
   background-position: center;

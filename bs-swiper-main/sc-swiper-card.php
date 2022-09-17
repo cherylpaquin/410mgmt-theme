@@ -35,7 +35,7 @@ function bootscore_swiper($atts) {
     'type' => 'post',
     'order' => 'date',
     'orderby' => 'date',
-    'posts' => -8,
+    'posts' => -1,
     'category' => '',
     'post_parent'    => '',
     'tax' => '',

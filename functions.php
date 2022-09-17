@@ -26,16 +26,6 @@ function bootscore_child_enqueue_styles()
 if (function_exists('acf_add_options_page')) {
 
     acf_add_options_page(array(
-        'page_title' => 'Featured Artists',
-        'menu_title' => 'Featured Artists',
-        'menu_slug' => 'featured-artists',
-        'capability' => 'edit_posts',
-        'position' => '6',
-        'icon_url' => 'dashicons-format-audio',
-        'redirect' => false,
-    ));
-
-    acf_add_options_page(array(
         'page_title' => 'What We Do',
         'menu_title' => 'What We Do',
         'menu_slug' => 'what-we-do',

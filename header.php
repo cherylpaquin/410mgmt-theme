@@ -47,7 +47,7 @@
           <div class="container">
 
             <!-- Navbar Brand -->
-            <a class="navbar-brand col-sm-1" href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/logo.png" alt="logo" class="logo brand-name"></a>
+            <a class="navbar-brand col-sm-1" href="#"><img src="<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/410mgmt_logo-KO.png" alt="logo" class="logo brand-name"></a>
 
             <!-- Offcanvas Navbar -->
             <div class="offcanvas offcanvas-end bg-dark" tabindex="-1" id="offcanvas-navbar">
