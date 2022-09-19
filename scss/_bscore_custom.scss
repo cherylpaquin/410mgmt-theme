@@ -142,6 +142,14 @@ h6 {
   background-size: cover !important;
 }
 
+.hero-logo {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  height: 300px;
+  width: 500px;
+}
+
 // Featured Artists Carousel
 .card {
   border: 0;
@@ -354,6 +362,11 @@ div.wpforms-container-full {
 }
 
 @include media-breakpoint-down(sm) {
+
+  .hero-logo {
+    height: 150px;
+    width: 200px;
+  }
   .main-header {
     padding: 1.25rem;
   }

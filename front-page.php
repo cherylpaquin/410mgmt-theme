@@ -25,7 +25,7 @@ $backgroundImg = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), '
           <header class="main-header d-flex flex-column align-items-center">
               <?php the_post();?>
               <!-- Title -->
-              <div style="background: url('<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/410mgmt_logo-KO.png'); background-repeat: no-repeat; background-position: center; background-size: contain; height: 300px; width: 500px;"></div>
+              <div style="background: url('<?php echo esc_url(get_stylesheet_directory_uri()); ?>/img/logo/410mgmt_logo-KO.png');" class="hero-logo"></div>
                 <div style="width: 80%; height: 1px; background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 75%, rgba(255,255,255,0) 100%);" class="my-2" ></div>
               <!-- Subtitle -->
               <p class="lead"><?php bloginfo('description');?></p>
