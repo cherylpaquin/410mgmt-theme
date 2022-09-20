@@ -155,6 +155,17 @@ h6 {
   border: 0;
 }
 
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0;
+}
+
+.cards .swiper-pagination-bullet {
+  width: 25px;
+  height: 4px;
+  border-radius: 0 !important;
+  margin: 0;
+}
+
 // Featured Artists
 .featured {
   background: #fff;
@@ -332,6 +343,17 @@ div.wpforms-container-full {
   background-size: cover;
   text-align: center;
   padding: 2rem 1rem;
+}
+
+#text {
+  display: inline-block;
+  vertical-align: middle;
+  color: #02498e;
+}
+
+#cursor, #mgmt {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 // FOOTER

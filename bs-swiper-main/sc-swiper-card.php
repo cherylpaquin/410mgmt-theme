@@ -102,8 +102,8 @@ function bootscore_swiper($atts) {
         <!-- Add Pagination -->
         <div class="swiper-pagination"></div>
         <!-- Add Arrows -->
-        <div class="swiper-button-next end-0"></div>
-        <div class="swiper-button-prev start-0"></div>
+        <!--div class="swiper-button-next end-0"></div>
+        <div class="swiper-button-prev start-0"></div-->
 
       </div><!-- swiper-container -->
 
