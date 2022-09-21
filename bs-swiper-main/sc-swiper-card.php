@@ -74,7 +74,7 @@ function bootscore_swiper($atts) {
     $ids = array_unique($ids);
     $options['post__in'] = $ids;
   }
-
+  $swipername = $atts['swipername'];
   $query = new WP_Query($options);
   if ($query->have_posts()) { ?>
 
@@ -83,7 +83,7 @@ function bootscore_swiper($atts) {
 
     <div class="px-5 position-relative">
 
-      <div class="cards swiper-container swiper position-static">
+      <div class="cards swiper-container swiper position-static <?= $swipername ? $swipername . "-carousel" : ""; ?>">
 
         <div class="swiper-wrapper">
 

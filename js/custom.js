@@ -87,6 +87,14 @@ jQuery(function ($) {
   };
 }); // jQuery End
 
+// set featured artists carousel to autoplay after initial load
+(function () {
+  const swiper = document.querySelector('.featured-artists-carousel')?.swiper;
+  if (swiper) {
+    swiper?.autoplay?.start();
+  }
+})();
+
 new Swiper('.artist-group', {
   slidesPerView: 7,
   breakpoints: {
@@ -113,43 +121,37 @@ new Swiper('.artist-group', {
 
 //Management Types Animation
 // List of sentences
-var _CONTENT = [ 
-  "410",
-  "TOUR",
-  "PRODUCTION", 
-  "TRAVEL", 
-  "PROJECT"
-];
+var _CONTENT = ['410', 'TOUR', 'PRODUCTION', 'TRAVEL', 'PROJECT'];
 
 // Current sentence being processed
 var _PART = 0;
 
-// Character number of the current sentence being processed 
+// Character number of the current sentence being processed
 var _PART_INDEX = 0;
 
 // Holds the handle returned from setInterval
 var _INTERVAL_VAL;
 
 // Element that holds the text
-var _ELEMENT = document.querySelector("#text");
+var _ELEMENT = document.querySelector('#text');
 
-// Cursor element 
-var _CURSOR = document.querySelector("#cursor");
+// Cursor element
+var _CURSOR = document.querySelector('#cursor');
 
 // Implements typing effect
-function Type() { 
+function Type() {
   // Get substring with 1 characater added
-  var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+  var text = _CONTENT[_PART].substring(0, _PART_INDEX + 1);
   _ELEMENT.innerHTML = text;
   _PART_INDEX++;
 
   // If full sentence has been displayed then start to delete the sentence after some time
-  if(text === _CONTENT[_PART]) {
+  if (text === _CONTENT[_PART]) {
     // Hide the cursor
     _CURSOR.style.display = 'none';
 
     clearInterval(_INTERVAL_VAL);
-    setTimeout(function() {
+    setTimeout(function () {
       _INTERVAL_VAL = setInterval(Delete, 10);
     }, 1000);
   }
@@ -158,24 +160,22 @@ function Type() {
 // Implements deleting effect
 function Delete() {
   // Get substring with 1 characater deleted
-  var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+  var text = _CONTENT[_PART].substring(0, _PART_INDEX - 1);
   _ELEMENT.innerHTML = text;
   _PART_INDEX--;
 
   // If sentence has been deleted then start to display the next sentence
-  if(text === '') {
+  if (text === '') {
     clearInterval(_INTERVAL_VAL);
 
     // If current sentence was last then display the first one, else move to the next
-    if(_PART == (_CONTENT.length - 1))
-      _PART = 0;
-    else
-      _PART++;
-    
+    if (_PART == _CONTENT.length - 1) _PART = 0;
+    else _PART++;
+
     _PART_INDEX = 0;
 
     // Start to display the next sentence after some time
-    setTimeout(function() {
+    setTimeout(function () {
       _CURSOR.style.display = 'inline-block';
       _INTERVAL_VAL = setInterval(Type, 10);
     }, 200);
