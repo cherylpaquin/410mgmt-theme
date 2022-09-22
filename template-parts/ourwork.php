@@ -13,7 +13,8 @@
 					<div class="swiper-wrapper">
 						<?php if( have_rows('list_of_artists', 'option')): ?>
 							<?php while( have_rows('list_of_artists', 'option')) : the_row(); ?>
-								<a href="<?php the_sub_field('artist_link'); ?>" target="_blank" class="artist-item swiper-slide">
+							<?php $artist_link = get_sub_field('artist_link'); ?>
+								<a href="<?= $artist_link ? $artist_link : "javascript:void(0);"; ?>" <?= $artist_link ?  'target="_blank"' : "";?> class="artist-item swiper-slide">
 									<p class="artist-name"><?php the_sub_field('artist_name'); ?></p>
 								</a>
 							<?php endwhile;?>
